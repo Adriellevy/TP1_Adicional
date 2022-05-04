@@ -11,7 +11,7 @@ cTecnico::~cTecnico() {
 #pragma endregion
 
 #pragma region metodos propios de la clase
-void cTecnico::SolicitarAuto(cVehiculo* _vehiculo) {
+bool cTecnico::SolicitarAuto(cVehiculo* _vehiculo) {
 	if (_vehiculo != NULL && this->vehiculo == false) {
 		if ((this->Tipo_de_vehiculos == _vehiculo->getTipo()) && (_vehiculo->getSeguridad() == true) && (_vehiculo->getOcupado() == false)) {
 			this->Vehiculo = _vehiculo; 
@@ -20,7 +20,7 @@ void cTecnico::SolicitarAuto(cVehiculo* _vehiculo) {
 		}
 	}
 	else {
-		this->InformarRechazo(_vehiculo); 
+		return false;
 	}
 }
 
@@ -35,12 +35,6 @@ cVehiculo* cTecnico::Devolver() {
 
 #pragma endregion
 
-void cTecnico::InformarRechazo(cVehiculo* _vehiculo) {
-	cout << "No se puede asignar este vehiculo" << endl;
-	_vehiculo->imprimir(); 
-	cout << "A este tecnico" << endl;
-	this->imprimir();
-}
 
 #pragma region funciones de impresion de la clase
 string cTecnico::to_string() {

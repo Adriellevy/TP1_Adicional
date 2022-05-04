@@ -24,9 +24,9 @@ public:
 	/// coincide con el que precisa, que tenga el mantenimiento hecho y que 
 	/// no esté ocupado y se lo asigna al Técnico.También setea el estado del Vehículo a ocupado.
 	/// El tecnico puede tener solo un auto, por lo que si desea cambiar de auto, tendra que devolverlo.
-	/// En tal caso se opto por informar por consola en un metodo especifico.
+	/// En tal caso se opto por informar con un false con la funcion
 	/// </summary>
-	void SolicitarAuto(cVehiculo* _vehiculo);
+	bool SolicitarAuto(cVehiculo* _vehiculo);
 
 	/// <summary>
 	/// setea el auto a mantenimiento pendiente, cambia el 
@@ -39,11 +39,6 @@ public:
 	/// </summary>
 	cVehiculo* getvehiculo() { return this->Vehiculo; }
 	
-	/// <summary>
-	/// Informa por consola en caso de que no se pueda agregar un vehiculo al tecnico 
-	/// e informa cual es el tecnico y vehiculo
-	/// </summary>
-	void InformarRechazo(cVehiculo* _vehiculo);
 #pragma endregion
 
 
