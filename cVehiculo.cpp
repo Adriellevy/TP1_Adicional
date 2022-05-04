@@ -10,7 +10,7 @@ cVehiculo::cVehiculo(bool _Esta_en_uso,bool _Verificacion_de_seguridad,eTipoDeVe
     }
 }
 cVehiculo::~cVehiculo() {
-    //this->Motor = NULL;
+
 }
 
 void cVehiculo::verificar_seguridad() {
@@ -23,24 +23,24 @@ void cVehiculo::verificar_seguridad() {
 }
 
 void cVehiculo::Devolucion_Vehiculo() {
-    this->Verificacion_de_seguridad == false;
+    this->Verificacion_de_seguridad = false;
     this->Motor->Devolucion_Vehiculo();
 }
 
 string cVehiculo::to_string() {
     stringstream stc;
-    stc << "Anio: " << this->Anio << endl;
-    stc << "Esta_en_uso: " << this->Esta_en_uso << endl;
-    stc << "Marca: " << this->Marca << endl;
-    stc << "Modelo: " << this->Modelo << endl;
-    stc << "Patente: " << this->Patente << endl;
-    stc << "Tipo de vehiculo: " << this->Tipo_de_vehiculo << endl;
-    stc << "Verificacion: " << this->Verificacion_de_seguridad << endl;
+    stc << "Anio:" << this->Anio << endl;
+    stc << "Esta_en_uso:" << this->Esta_en_uso << endl;
+    stc << "Marca:" << this->Marca << endl;
+    stc << "Modelo:" << this->Modelo << endl;
+    stc << "Patente:" << this->Patente << endl;
+    stc << "Tipo de vehiculo:" << this->Tipo_de_vehiculo << endl;
+    stc << "Verificacion:" << this->Verificacion_de_seguridad << endl;
     return stc.str();
 }
 
 void cVehiculo::imprimir() {
-    cout << this->to_string();
+    cout << this->to_string() << endl;
 }
 
 

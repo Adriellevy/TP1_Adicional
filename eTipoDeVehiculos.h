@@ -3,4 +3,4 @@
 /// <summary>
 /// Posibles tipos de vehiculos
 /// </summary>
-enum eTipoDeVehiculos { TodoTerreno, CrossOver, SUV, Pickup, Otro };
+enum eTipoDeVehiculos { Utilitario,Sedan,TodoTerreno, CrossOver, SUV, Pickup, Otro };
