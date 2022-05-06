@@ -1,5 +1,5 @@
-#ifndef _CVEHÕCULO_H
-#define _CVEHÕCULO_H
+#ifndef _CVEH√çCULO_H
+#define _CVEH√çCULO_H
 
 #include "gbl.h"
 #include "cMotor.h"
@@ -25,16 +25,16 @@ public:
 #pragma region metodos propios de la calse
     /// <summary>
     /// Verifica que el motor tenga realizado el mantenimiento, si no lo tiene solicita el mantenimiento.
-    /// Luego, imprime un mensaje que indica que el vehÌculo es seguro,
-    /// cambia la verificaciÛn de seguridad a aprobada.Si no pudo realizar el
+    /// Luego, imprime un mensaje que indica que el veh√≠culo es seguro,
+    /// cambia la verificaci√≥n de seguridad a aprobada.Si no pudo realizar el
     /// mantenimiento, mantiene el estado actual.
     /// </summary>
     void verificar_seguridad();
 
     /// <summary>
-    /// este mÈtodo se llama al
-    /// devolver un vehÌculo y setea la verificaciÛn de seguridad como no realizada
-    /// (tanto en el vehÌculo como en el motor)
+    /// este m√©todo se llama al
+    /// devolver un veh√≠culo y setea la verificaci√≥n de seguridad como no realizada
+    /// (tanto en el veh√≠culo como en el motor)
     /// </summary>
     void Devolucion_Vehiculo();
 
@@ -50,7 +50,7 @@ public:
     /// En caso de querer realizar un motor se setea con este metodo
     /// </summary>
     /// <param name="_motor"></param>
-    void setMotor(cMotor* _motor) { this->Motor = _motor; }
+     void setMotor(cMotor* _motor) { if(_motor!=NULL)this->Motor = _motor; }
     cMotor* getMotor() { return this->Motor; }
 #pragma endregion
 #pragma region to string e imprimir
@@ -75,4 +75,4 @@ private:
 };
 
 
-#endif //_CVEHÕCULO_H
+#endif //_CVEH√çCULO_H
